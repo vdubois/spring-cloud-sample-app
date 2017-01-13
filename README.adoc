@@ -1,0 +1,23 @@
+= spring-cloud-sample-app
+
+TODO
+
+== Getting Started
+
+To get you started you can simply clone the `spring-cloud-sample-app` repository and install the dependencies:
+
+```
+npm install
+bower install
+```
+
+== Run app in development
+
+This command starts a local web server on port 8000. Open your browser and navigate to http://localhost:8000.
+
+```
+npm start
+```
+
+== Run app with Docker
+
