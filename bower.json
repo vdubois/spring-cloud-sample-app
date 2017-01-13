@@ -1,0 +1,14 @@
+{
+  "name": "spring-cloud-sample-app",
+  "description": "An AngularJS frontend app for Spring Cloud sample",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vdubois/spring-cloud-sample-app",
+  "license": "Apache 2",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.1",
+    "angular-ui-router": "0.3.2",
+    "angular-mocks": "1.6.1",
+    "MDBootstrap": "4.2.0"
+  }
+}
