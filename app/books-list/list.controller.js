@@ -1,6 +1,8 @@
-var booksListCtrl = function () {
-    var vm = this;
-    vm.books = [];
-};
+(function () {
+    var booksListCtrl = function () {
+        var vm = this;
+        vm.books = [];
+    };
 
-angular.module('cloudSampleApp').controller('booksListCtrl', booksListCtrl);
+    angular.module('cloudSampleApp').controller('booksListCtrl', booksListCtrl);
+})();
