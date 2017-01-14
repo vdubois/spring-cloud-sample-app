@@ -3,6 +3,7 @@
 
     angular.module('cloudSampleApp')
         .value('properties', {
-            securityToken: 'cloudSample-app-jwt-token'
+            securityToken: 'cloudSample-app-jwt-token',
+            loginUrl: '/login'
         });
 })();

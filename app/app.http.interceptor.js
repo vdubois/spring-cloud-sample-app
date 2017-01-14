@@ -5,7 +5,9 @@
         .factory('appHttpInterceptor', function (SecurityService) {
             return {
                 request: function (config) {
-                    SecurityService.redirectIfJwtTokenNotFound();
+                    if (!SecurityService.redirectToLoginPageIfJwtTokenNotFound()) {
+                        config.headers.authorization = SecurityService.getJwtToken();
+                    }
                     return config;
                 },
 
@@ -14,7 +16,7 @@
                 },
 
                 response: function (res) {
-                    // TODO
+                    SecurityService.redirectToLoginPageWhenUnauthorized(res.status);
                     return res;
                 },
 

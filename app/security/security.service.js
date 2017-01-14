@@ -1,19 +1,33 @@
 (function () {
     angular.module('cloudSampleApp', function (localStorageService, $location, properties) {
         return {
-            redirectIfJwtTokenNotFound: redirectIfJwtTokenNotFound,
-            saveJwtToken: saveJwtToken
+            redirectToLoginPageIfJwtTokenNotFound: redirectToLoginPageIfJwtTokenNotFound,
+            saveJwtToken: saveJwtToken,
+            getJwtToken: getJwtToken,
+            redirectToLoginPageWhenUnauthorized: redirectToLoginPageWhenUnauthorized
         };
 
-        function redirectIfJwtTokenNotFound() {
+        function redirectToLoginPageIfJwtTokenNotFound() {
             var jwtToken = localStorageService.get(properties.securityToken);
             if (!jwtToken) {
-                $location.url('/login');
+                $location.url(properties.loginUrl);
+                return true;
             }
+            return false;
         }
 
         function saveJwtToken(jwtToken) {
             localStorageService.set(properties.securityToken, jwtToken);
         }
-    })
+
+        function getJwtToken() {
+            return localStorageService.get(properties.securityToken);
+        }
+
+        function redirectToLoginPageWhenUnauthorized(httpCode) {
+            if (httpCode === 401) {
+                $location.url(properties.loginUrl);
+            }
+        }
+    });
 });
