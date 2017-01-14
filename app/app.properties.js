@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('cloudSampleApp')
-        .value('properties', {
+        .constant('properties', {
             securityToken: 'cloudSample-app-jwt-token',
             loginUrl: '/login'
         });
