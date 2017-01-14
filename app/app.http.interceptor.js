@@ -2,16 +2,10 @@
     'use strict';
 
     angular.module('cloudSampleApp')
-        .factory('appHttpInterceptor', function (localStorageService, $location) {
-            var redirectIfJwtTokenNotFound = function () {
-                var jwtToken = localStorageService.get('cloudSample-app-jwt-token');
-                if (!jwtToken) {
-                    $location.url('/login');
-                }
-            };
+        .factory('appHttpInterceptor', function (SecurityService) {
             return {
                 request: function (config) {
-                    redirectIfJwtTokenNotFound();
+                    SecurityService.redirectIfJwtTokenNotFound();
                     return config;
                 },
 
