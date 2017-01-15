@@ -7,7 +7,7 @@
             $urlRouterProvider.otherwise('/');
             $stateProvider.state('books-list', {
                 url: '/',
-                templateUrl: 'books-list/list.tpl.html',
+                templateUrl: 'books/list.tpl.html',
                 controller: 'booksListCtrl',
                 controllerAs: 'booksList'
             });
