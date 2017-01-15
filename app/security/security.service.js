@@ -1,11 +1,13 @@
 (function () {
     angular.module('cloudSampleApp')
-        .service('SecurityService', function (localStorageService, $location, properties) {
+        .service('SecurityService', function (localStorageService, $location, properties, $injector) {
+            var httpService;
             return {
                 redirectToLoginPageIfJwtTokenNotFound: redirectToLoginPageIfJwtTokenNotFound,
                 saveJwtToken: saveJwtToken,
                 getJwtToken: getJwtToken,
-                redirectToLoginPageWhenUnauthorized: redirectToLoginPageWhenUnauthorized
+                redirectToLoginPageWhenUnauthorized: redirectToLoginPageWhenUnauthorized,
+                authenticate: authenticate
             };
 
             function redirectToLoginPageIfJwtTokenNotFound() {
@@ -29,6 +31,13 @@
                 if (httpCode === 401) {
                     $location.url(properties.loginUrl);
                 }
+            }
+
+            function authenticate(email, password) {
+                if (!httpService) {
+                    httpService = $injector.get('$http');
+                }
+                return httpService.post(properties.apiBaseUrl + "/authenticate", {email: email, password: password});
             }
         });
 })();
