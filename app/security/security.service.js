@@ -28,7 +28,7 @@
             }
 
             function redirectToLoginPageWhenUnauthorized(httpCode) {
-                if (httpCode === 401) {
+                if (httpCode === 401 || httpCode === 403 || httpCode === -1) {
                     $location.url(properties.loginUrl);
                 }
             }
