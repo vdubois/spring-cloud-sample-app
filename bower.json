@@ -12,5 +12,10 @@
     "angular-mocks": "1.6.1",
     "MDBootstrap": "4.2.0",
     "toastr": "2.1.3"
+  },
+  "overrides": {
+    "MDBootstrap": {
+      "main": ["js/mdb.js", "css/mdb.css", "css/bootstrap.css", "css/style.css"]
+    }
   }
 }

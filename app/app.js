@@ -1,7 +1,13 @@
 (function () {
     'use strict';
 
-    angular.module('cloudSampleApp', ['ui.router', 'LocalStorageModule'])
+    try {
+        angular.module("templates");
+    } catch (err) {
+        angular.module('templates', []);
+    }
+
+    angular.module('cloudSampleApp', ['ui.router', 'LocalStorageModule', 'templates'])
         .config(function($urlRouterProvider, $stateProvider, $httpProvider, localStorageServiceProvider, properties) {
 
             $urlRouterProvider.otherwise('/');

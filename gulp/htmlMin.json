@@ -1,0 +1,16 @@
+{
+  "removeComments": true,
+  "removeCommentsFromCDATA": true,
+  "removeCDATASectionsFromCDATA": true,
+  "collapseWhitespace": true,
+  "conservativeCollapse": true,
+  "preserveLineBreaks": false,
+  "collapseBooleanAttributes": true,
+  "removeAttributeQuotes": true,
+  "removeRedundantAttributes": true,
+  "useShortDoctype": true,
+  "removeEmptyAttributes": true,
+  "removeScriptTypeAttributes": true,
+  "removeStyleLinkTypeAttributes": true,
+  "removeIgnored": true
+}

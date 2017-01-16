@@ -9,11 +9,21 @@
   <title>My sample microservices bookapp</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/MDBootstrap/css/mdb.css" />
+  <link rel="stylesheet" href="bower_components/MDBootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/MDBootstrap/css/style.css" />
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <!-- inject:css -->
   <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="bower_components/MDBootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="bower_components/MDBootstrap/css/mdb.css">
-  <link rel="stylesheet" href="bower_components/MDBootstrap/css/style.css">
-  <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+
 </head>
 <body class="fixed-sn mdb-skin">
   <!--[if lt IE 7]>
@@ -22,26 +32,36 @@
 
   <ui-view></ui-view>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-  <script src="bower_components/angular-messages/angular-messages.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="bower_components/MDBootstrap/js/tether.js"></script>
-  <script src="bower_components/MDBootstrap/js/jquery-2.2.3.js"></script>
-  <script src="bower_components/MDBootstrap/js/bootstrap.js"></script>
+  <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/tether/dist/js/tether.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/MDBootstrap/js/mdb.js"></script>
   <script src="bower_components/toastr/toastr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/scripts.js -->
+  <!-- inject:js -->
   <script src="app.js"></script>
-  <script src="app.properties.js"></script>
-  <script src="app.run.js"></script>
-  <script src="app.http.interceptor.js"></script>
-  <script src="exception/exception-handler.factory.js"></script>
-  <script src="books/list.controller.js"></script>
   <script src="books/books.service.js"></script>
+  <script src="books/list.controller.js"></script>
+  <script src="conf/app.http.interceptor.js"></script>
+  <script src="conf/app.properties.js"></script>
+  <script src="conf/app.run.js"></script>
+  <script src="exception/exception-handler.factory.js"></script>
   <script src="security/security.service.js"></script>
   <script src="login/login.controller.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/templates.js -->
+  <!-- Keep one line empty -->
+  <!-- endbuild -->
 </body>
 </html>
