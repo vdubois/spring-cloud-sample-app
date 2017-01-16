@@ -21,6 +21,7 @@
                 },
 
                 responseError: function (res) {
+                    SecurityService.redirectToLoginPageWhenUnauthorized(res.status);
                     return res;
                 }
             }
