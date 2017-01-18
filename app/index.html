@@ -30,7 +30,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <ui-view></ui-view>
+    <main>
+        <div class="container">
+            <ui-view></ui-view>
+        </div>
+    </main>
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
@@ -55,8 +59,8 @@
   <script src="conf/app.properties.js"></script>
   <script src="conf/app.run.js"></script>
   <script src="exception/exception-handler.factory.js"></script>
-  <script src="security/security.service.js"></script>
   <script src="login/login.controller.js"></script>
+  <script src="security/security.service.js"></script>
   <!-- endinject -->
   <!-- endbuild -->
 
