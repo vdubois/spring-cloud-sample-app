@@ -29,6 +29,23 @@ function launchServe() {
         throw new Error("--env argument must be one of: " + possibleEnvs.substring(0, possibleEnvs.length - 1));
     }
 
+    if (env[profile].backend.stubby) {
+        /* Start Stubby Server */
+        var options = {
+            stubs: env[profile].backend.port,
+            admin: env[profile].backend.adminPort,
+            files: [
+                'stub/*.yaml'
+            ]
+        };
+        /* Stubby is launched on localhost */
+        env[profile].backend.address = "localhost";
+
+        /* Start the stubby server, asynchronously */
+        $.stubbyServer(options, function () {
+        });
+    }
+
     $.connect.server({
         root      : [env[profile].rootdir],
         port      : env[profile].port,
@@ -140,7 +157,7 @@ gulp.task('copy', [
 
 gulp.task('minify', ['copy'], function () {
     return gulp.src('app/index.html')
-        .pipe($.useref.assets())
+        .pipe($.useref())
         .pipe($.sourcemaps.init({loadMaps: true}))
         .pipe($.if('**/*.js', $.ngAnnotate()))
         .pipe($.if('**/*.js', $.uglify({output: {ascii_only: true}})))

@@ -1,0 +1,10 @@
+- request:
+    url: ^/api/v1/books$
+    method: GET
+  response:
+  - status: 200
+    latency: 250
+    headers:
+      content-type: application/json
+      server: stubby/1.0
+    file: stub/books.json

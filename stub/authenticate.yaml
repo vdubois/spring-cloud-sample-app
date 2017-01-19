@@ -1,0 +1,10 @@
+- request:
+    url: ^/api/v1/authenticate$
+    method: POST
+  response:
+  - status: 200
+    latency: 250
+    headers:
+      content-type: application/json
+      server: stubby/1.0
+    body: '{"token":"stub-token"}'

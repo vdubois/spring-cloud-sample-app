@@ -31,8 +31,8 @@ module.exports = function (config) {
             'conf/app.properties.js',
             'conf/app.run.js',
             'exception/exception-handler.factory.js',
-            'security/security.service.js',
             'login/login.controller.js',
+            'security/security.service.js',
             // endinject
             // inject:spec.js
             '../test/spec/book/controllers/list.controller.spec.js'
