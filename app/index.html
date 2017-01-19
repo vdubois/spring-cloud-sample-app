@@ -11,31 +11,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/MDBootstrap/css/mdb.css" />
-  <link rel="stylesheet" href="bower_components/MDBootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/MDBootstrap/css/style.css" />
   <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:css styles/main.css -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="mdb.css">
   <!-- endinject -->
   <!-- endbuild -->
 
 </head>
-<body class="fixed-sn mdb-skin">
+<body>
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
+    <cloud-app-header></cloud-app-header>
+  
     <main>
         <div class="container">
             <ui-view></ui-view>
         </div>
     </main>
 
+    <cloud-app-footer></cloud-app-footer>
+  
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
@@ -58,6 +59,8 @@
   <script src="conf/app.http.interceptor.js"></script>
   <script src="conf/app.properties.js"></script>
   <script src="conf/app.run.js"></script>
+  <script src="components/footer.directive.js"></script>
+  <script src="components/header.directive.js"></script>
   <script src="exception/exception-handler.factory.js"></script>
   <script src="login/login.controller.js"></script>
   <script src="security/security.service.js"></script>

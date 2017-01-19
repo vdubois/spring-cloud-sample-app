@@ -15,7 +15,7 @@
   },
   "overrides": {
     "MDBootstrap": {
-      "main": ["js/mdb.js", "css/mdb.css", "css/bootstrap.css", "css/style.css"]
+      "main": ["js/mdb.js"]
     }
   }
 }
