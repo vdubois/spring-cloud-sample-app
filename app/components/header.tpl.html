@@ -1,0 +1,25 @@
+<header ng-if="$root.authenticated">
+    <nav class="navbar navbar-dark primary-color-dark">
+
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="container">
+            <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <a class="navbar-brand" href="http://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">Amazin</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Books <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control" type="text" placeholder="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>

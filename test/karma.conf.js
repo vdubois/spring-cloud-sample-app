@@ -30,6 +30,8 @@ module.exports = function (config) {
             'conf/app.http.interceptor.js',
             'conf/app.properties.js',
             'conf/app.run.js',
+            'components/footer.directive.js',
+            'components/header.directive.js',
             'exception/exception-handler.factory.js',
             'login/login.controller.js',
             'security/security.service.js',
