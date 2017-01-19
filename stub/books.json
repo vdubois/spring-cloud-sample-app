@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "Cloud Native Java",
+    "price": 34.99,
+    "publicationDate": "2017-01-19T11:24:31.142Z",
+    "numberOfPages": 258,
+    "editor": "O'Reilly",
+    "isbn": "123456789",
+    "authors": [
+      {
+        "id": 1,
+        "name": "Josh Long"
+      },
+      {
+        "id": 2,
+        "name": "Kenni Bastani"
+      }
+    ]
+  }
+]
