@@ -25,15 +25,16 @@ module.exports = function (config) {
             // endbower
             // inject:js
             'app.js',
+            'books/authors.filter.js',
             'books/books.service.js',
             'books/list.controller.js',
+            'components/footer.directive.js',
+            'components/header.directive.js',
             'conf/app.http.interceptor.js',
             'conf/app.properties.js',
             'conf/app.run.js',
-            'components/footer.directive.js',
-            'components/header.directive.js',
-            'exception/exception-handler.factory.js',
             'login/login.controller.js',
+            'exception/exception-handler.factory.js',
             'security/security.service.js',
             // endinject
             // inject:spec.js

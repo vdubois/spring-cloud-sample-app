@@ -10,3 +10,34 @@
         </h1>
     </div>
 </div>
+<hr>
+<div ng-repeat="book in booksList.books">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="view overlay hm-white-light z-depth-1-half">
+                <img ng-src="{{book.image}}" class="img-fluid" alt="">
+                <div class="mask waves-effect waves-light"></div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <a href="#!"><h2 class="post-title">{{book.name}}</h2></a>
+            <p class="lead">
+                <strong>Authors</strong> : {{book.authors | authors }}
+                <br>
+                <strong>Publication date</strong> : {{book.publicationDate}}
+                <br>
+                <strong>Editor</strong> : {{book.editor}}
+                <br>
+                <strong>Number of pages</strong> : {{book.numberOfPages}}
+                <br>
+                <strong>ISBN</strong> : {{book.isbn}}
+                <br>
+                <strong>Price</strong> : {{book.price}}
+            </p>
+            <div class="read-more">
+                <a href="#!" class="btn btn-primary waves-effect waves-light">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
