@@ -17,6 +17,12 @@
                 controller: 'booksListCtrl',
                 controllerAs: 'booksList'
             });
+            $stateProvider.state('book-detail', {
+                url: '/books/:isbn',
+                templateUrl: 'books/detail.tpl.html',
+                controller: 'bookDetailCtrl',
+                controllerAs: 'bookDetail'
+            });
             $stateProvider.state('login', {
                 url: properties.loginUrl,
                 templateUrl: 'login/login.tpl.html',

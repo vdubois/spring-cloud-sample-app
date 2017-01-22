@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="col-lg-9">
-            <a href="#!"><h2 class="post-title">{{book.name}}</h2></a>
+            <a ui-sref="book-detail({isbn:book.isbn})"><h2 class="post-title">{{book.name}}</h2></a>
             <p class="lead">
                 <strong>Authors</strong> : {{book.authors | authors }}
                 <br>
@@ -38,7 +38,7 @@
                 <strong>Price</strong> : {{book.price}}
             </p>
             <div class="read-more">
-                <a href="#!" class="btn btn-primary waves-effect waves-light">Show details</a>
+                <a ui-sref="book-detail({isbn:book.isbn})" class="btn btn-primary waves-effect waves-light">Show details</a>
             </div>
         </div>
     </div>

@@ -25,11 +25,12 @@ module.exports = function (config) {
             // endbower
             // inject:js
             'app.js',
-            'books/authors.filter.js',
-            'books/books.service.js',
-            'books/list.controller.js',
             'components/footer.directive.js',
             'components/header.directive.js',
+            'books/authors.filter.js',
+            'books/books.service.js',
+            'books/detail.controller.js',
+            'books/list.controller.js',
             'conf/app.http.interceptor.js',
             'conf/app.properties.js',
             'conf/app.run.js',
